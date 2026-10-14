@@ -4,6 +4,6 @@
   "private":true,
   "type":"module",
   "scripts":{"dev":"wrangler dev","deploy":"wrangler deploy","check":"tsc --noEmit","test":"node --test tests/*.test.mjs"},
-  "dependencies":{"agents":"^0.3.0","@modelcontextprotocol/server":"^2.3.1","zod":"^4.0.0"},
+  "dependencies":{"agents":"^0.28.1","@modelcontextprotocol/server":"^2.3.1","zod":"^4.0.0"},
   "devDependencies":{"typescript":"^5.8.0","wrangler":"^4.0.0","@cloudflare/workers-types":"^4.20260101.0"}
 }
