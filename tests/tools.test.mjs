@@ -1,0 +1,3 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+test('server has three read-only tools',()=>{const code=readFileSync(new URL('../src/index.ts',import.meta.url),'utf8');for(const name of ['search_sap_references','get_integration_architecture','review_integration_code'])assert.ok(code.includes(name));assert.equal((code.match(/readOnlyHint:true/g)||[]).length,3);});
+test('no service bindings or AI billing',()=>{const config=readFileSync(new URL('../wrangler.jsonc',import.meta.url),'utf8');for(const name of ['ai','d1_databases','r2_buckets','kv_namespaces','durable_objects','routes'])assert.ok(!config.includes('"'+name+'"'));});
