@@ -20,7 +20,7 @@ const response = (value: unknown) => ({
 
 function createServer() {
   const server = new McpServer({
-    name: 'SAP Integration Helper',
+    name: 'Integration Helper by RV',
     version: '0.2.0'
   });
 
@@ -106,7 +106,7 @@ export default {
     if (path === '/health' && request.method === 'GET') {
       return Response.json({
         status: 'ok',
-        service: 'SAP Integration Helper MCP',
+        service: 'Integration Helper by RV MCP',
         mode: 'read-only',
         version: '0.2.0'
       });
